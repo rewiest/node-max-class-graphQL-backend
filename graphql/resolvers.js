@@ -73,7 +73,6 @@ module.exports = {
       error.code = 422;
       throw error;
     }
-    console.log(posts);
     return { posts: posts.map(p => {
       return { 
         ...p._doc,
