@@ -53,9 +53,6 @@ app.use('/graphql', graphqlHttp({
     const data = error.originalError.data;
     const message = error.message || 'An error occurred.';
     const code = error.originalError.code || 500;
-    console.log('MESSAGE', message);
-    console.log('STATUS', code);
-    console.log('DATA', data);
     return { message: message, status: code, data: data };
   }
 }));
